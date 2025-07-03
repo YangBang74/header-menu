@@ -83,14 +83,20 @@
 
   &__category {
     position: absolute;
+    opacity: 0;
     display: flex;
     top: 130px;
     background-color: #ffffff;
     left: 0;
     padding: 1.875rem 0;
     box-shadow: 0 0 0.625rem #9d9d9d48;
-    z-index: 50;
+    z-index: -1000;
     border-radius: 0.5rem;
+    transition: 0.1s;
+  }
+  &__category.active {
+    opacity: 1;
+    z-index: 50;
   }
   &__category-button {
     padding: 0.8125rem 1.875rem;

@@ -78,7 +78,7 @@
           </a>
           <div class="header__menu">
             <div class="header__menu-top">
-              <button type="button" class="header__menu-burger">
+              <button type="button" class="header__menu-burger" onclick="toggleCategory()">
                 <span class="header__burger-line"></span>
                 <span class="header__burger-line"></span>
                 <span class="header__burger-line"></span>
@@ -967,6 +967,11 @@
       </main>
     </div>
 
-    <script src="./scripts/main.js"></script>
+    <script>
+      function toggleCategory() {
+        const subCategory = document.querySelector('.header__category')
+        subCategory.classList.toggle('active')
+      }
+    </script>
   </body>
 </html>
