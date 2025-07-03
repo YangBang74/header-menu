@@ -12,6 +12,21 @@ body {
   color: #000000;
 }
 
+.container {
+  margin-inline: auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  flex: 1;
+}
+
 a,
 button {
   transition: 0.2s;
