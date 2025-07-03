@@ -1,7 +1,6 @@
-@use './fonts';
 @use './base/reset';
 @use './components/header';
-
+@use 'fonts';
 html,
 body {
   height: 100%;
@@ -9,5 +8,11 @@ body {
 
 body {
   background-color: #ffffff;
-  font-family: 'Maza', sans-serif;
+  font-family: 'Maza';
+  color: #000000;
+}
+
+a,
+button {
+  transition: 0.2s;
 }
