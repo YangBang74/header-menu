@@ -81,11 +81,13 @@
     padding: 1rem 1.875rem;
   }
 
-  &__category {
+  &__category,
+  &__present,
+  &__party {
     position: absolute;
     opacity: 0;
     display: flex;
-    top: 130px;
+    top: 8.125rem;
     background-color: #ffffff;
     left: 0;
     padding: 1.875rem 0;
@@ -94,7 +96,14 @@
     border-radius: 0.5rem;
     transition: 0.1s;
   }
-  &__category.active {
+  &__present {
+    left: 6.25rem;
+  }
+  &__party {
+  }
+  &__category.active,
+  &__present.active,
+  &__party.active {
     opacity: 1;
     z-index: 50;
   }
@@ -103,8 +112,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 21.875rem;
     gap: 1.9375rem;
+  }
+  &__present &__category-button {
+    width: 21.125rem;
   }
   &__category-button.active {
     background-color: #f3f3f3;
@@ -288,6 +300,10 @@
     padding: 0.6875rem 0.375rem;
     border-radius: 0.5rem;
     white-space: nowrap;
+  }
+  &__menu-btn svg {
+    min-width: 1rem;
+    min-height: 1rem;
   }
   &__menu-btn:hover {
     background-color: #4888ff;
