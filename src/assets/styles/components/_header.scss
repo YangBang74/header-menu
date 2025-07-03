@@ -1,5 +1,6 @@
 .header {
   display: relative;
+  width: 100%;
   &__top {
     padding: 0 2.5rem;
     background-color: #f4f4f4;
@@ -57,6 +58,7 @@
 
   &__menu {
     width: 100%;
+    position: relative;
   }
 
   &__menu-top {
@@ -78,6 +80,45 @@
     border-radius: 0.5rem;
     padding: 1rem 1.875rem;
   }
+
+  &__category {
+    position: absolute;
+    top: 130px;
+    background-color: #ffffff;
+    left: 0;
+    padding: 1.875rem 0;
+    box-shadow: 0 0 0.625rem #9d9d9d48;
+    z-index: 50;
+    border-radius: 0.5rem;
+  }
+  &__category-button {
+    padding: 0.8125rem 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1.9375rem;
+  }
+  &__category-button.active {
+    background-color: #f3f3f3;
+  }
+  &__category-button.active svg {
+    color: #4888ff;
+  }
+  &__category-button:hover &__category-about svg {
+    opacity: 100%;
+  }
+  &__category-about {
+    display: flex;
+    color: #343a3f;
+    gap: 1rem;
+  }
+  &__category-about svg {
+    width: 1.5rem;
+    opacity: 50%;
+    height: 1.5rem;
+  }
+
   &__burger-line {
     display: block;
     background-color: #ffffff;
