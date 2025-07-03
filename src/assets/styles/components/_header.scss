@@ -36,9 +36,18 @@
   .list--gap {
     gap: 1rem;
   }
+
+  &__bottom {
+    display: flex;
+    padding: 0 40px;
+  }
+
+  &__bottom-logo {
+    background-color: #4888ff;
+    display: block;
+    border-radius: 100%;
+  }
 }
 
-
 @media (max-width: 769px) {
-  
 }

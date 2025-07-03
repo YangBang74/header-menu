@@ -1,51 +1,49 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    assetModuleFilename: 'assets/[name][ext]', // картинка попадёт в dist/assets/
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'style.css',
+    }),
+  ],
   module: {
     rules: [
       {
         test: /\.scss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(woff2?|ttf|otf|eot)$/i,
+        test: /\.(woff2?|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[name][ext]',
         },
       },
       {
-        rules: [
-          {
-            test: /\.(png|jpe?g|gif|svg|webp)$/i,
-            type: 'asset/resource',
-          },
-        ],
+        test: /\.(png|jpe?g|gif|svg|webp)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/[name][ext]',
+        },
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
-  ],
   devServer: {
     static: './dist',
     port: 3000,
     open: true,
   },
-  resolve: {
-    extensions: ['.js'],
-  },
+  mode: 'development',
 }
