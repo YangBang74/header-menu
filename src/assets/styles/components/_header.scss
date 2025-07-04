@@ -43,6 +43,11 @@
   &__bottom {
     margin: 0.625rem 0;
     display: flex;
+    position: sticky;
+    z-index: 100;
+    background-color: #ffffff;
+    width: 100%;
+
     gap: clamp(1.25rem, 1.875rem, 2.1875rem);
     padding: 0 2.5rem;
   }
