@@ -1,4 +1,3 @@
-<!-- src/index.html -->
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -1405,7 +1404,22 @@
         </div>
       </header>
       <main>
-        <section class="hero"></section>
+        <section class="hero">
+          <div class="hero__body">
+            <div class="hero__text">
+              <h1 class="hero__text-title">
+                Отправляйся в приключения с нашими эпическими лут-корзинами и наборами!
+              </h1>
+              <p class="hero__text-p">
+                Развивай свои навыки, следуя мудрым стратегиям мастеров, и поднимайся на новый
+                уровень мастерства! С нашей поддержкой каждое твое действие станет частью великого
+                искусства, а победы — результатом точного плана и безупречной подготовки!
+              </p>
+              <button type="button" class="hero__text-btn">В каталог</button>
+            </div>
+            <div class="hero__body-img"></div>
+          </div>
+        </section>
       </main>
     </div>
 
@@ -1413,10 +1427,6 @@
       function toggleMenu(category) {
         const subCategory = document.querySelector(`.header__${category}`)
         subCategory.classList.toggle('active')
-      }
-      function present() {
-        const subPresent = document.querySelector('.header__present')
-        subPresent.classList.toggle('active')
       }
     </script>
   </body>

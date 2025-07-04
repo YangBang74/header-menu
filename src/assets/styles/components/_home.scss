@@ -1,4 +1,136 @@
 .hero {
   background: #672870;
   background: linear-gradient(90deg, rgba(103, 40, 112, 1) 20%, rgba(79, 224, 255, 1) 100%);
+  padding-left: 6.25rem;
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.875rem;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.625rem;
+    width: calc(50% - 0.9375rem);
+    color: #ffffff;
+    font-family: 'Tenor Sans', sans-serif;
+    &-title {
+      font-size: 2rem;
+      line-height: 2.25rem;
+    }
+    &-p {
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+    }
+    &-btn {
+      background-color: #ffffff;
+      border-radius: 0.5rem;
+      padding: 1rem 2.5rem;
+      font-family: 'Maza', sans-serif;
+      color: #672870;
+    }
+  }
+  &__body-img {
+    background-image: url('/src/assets/img/gamepad.png');
+    background-repeat: no-repeat;
+    background-position: 120px -50px;
+    background-size: 110%;
+    width: 50%;
+    height: 100%;
+    display: block;
+    padding: 250px 0;
+  }
+}
+
+@media (max-width: 1439px) {
+  .hero__body-img {
+    background-position: 120px -50px;
+    background-size: 110%;
+    width: 50%;
+    height: 100%;
+    display: block;
+    padding: 200px 0;
+  }
+}
+
+@media (max-width: 1247px) {
+  .hero {
+    padding-left: 70px;
+  }
+  .hero__text {
+    padding: 30px 0 0;
+    width: 70%;
+  }
+  .hero__body-img {
+    background-position: 60px 0;
+    background-size: 130%;
+    width: 50%;
+    height: 100%;
+    display: block;
+    padding: 200px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 30px 0 30px 30px;
+    overflow: hidden;
+  }
+  .hero__body-img {
+    position: relative;
+    bottom: -60px;
+    background-position: 0 0;
+    background-size: 150%;
+    width: 50%;
+    height: 100%;
+    display: block;
+    padding: 200px 0;
+  }
+}
+
+@media (max-width: 769px) {
+  .hero {
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0.9375rem 18.75rem;
+  }
+  .hero__body {
+    flex-direction: column;
+  }
+  .hero__text {
+    width: 100%;
+  }
+  .hero__body-img {
+    bottom: -70px;
+    right: -280px;
+    position: absolute;
+    background-position: right;
+    background-size: 70%;
+    width: 100%;
+    height: 40%;
+    display: block;
+    padding: 250px 0;
+  }
+}
+
+@media (max-width: 630px) {
+  .hero {
+    overflow: hidden;
+    padding-bottom: 200px;
+  }
+  .hero__body-img {
+    bottom: -140px;
+    right: -100px;
+    position: absolute;
+    background-position: right;
+    background-size: 70%;
+    width: 100%;
+    height: 40%;
+    display: block;
+    padding: 250px 0;
+  }
 }
