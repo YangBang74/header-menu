@@ -1,6 +1,9 @@
 .header {
   display: relative;
   width: 100%;
+  .header__top .header__menu-lang {
+    display: none;
+  }
   &__top {
     padding: 0 2.5rem;
     background-color: #f4f4f4;
@@ -9,7 +12,6 @@
     justify-content: space-between;
     align-items: center;
   }
-
   &__top-list {
     display: flex;
     gap: 0.75rem;
@@ -309,6 +311,9 @@
     background-color: #4888ff;
     color: #ffffff;
   }
+  .header__mobil {
+    display: none;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -338,4 +343,86 @@
 }
 
 @media (max-width: 769px) {
+  .header {
+    .header__mobil {
+      display: block;
+      &-up {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3.125rem;
+        padding: 0 1rem;
+      }
+      &-logo {
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: #4888ff;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        svg {
+          width: 1.7937rem;
+          height: 1.7937rem;
+        }
+      }
+      .header__menu-search {
+        margin: 0 1rem 1.5rem;
+        button {
+          padding: 0.5rem;
+        }
+      }
+    }
+    &__up-left,
+    &__up-right {
+      display: flex;
+      gap: 0.375rem;
+    }
+    &__up-burger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      background-color: #4888ff;
+      border-radius: 0.3125rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0.7813rem 0.5469rem;
+    }
+    &__up-burgerline {
+      display: block;
+      height: 0.0781rem;
+      width: 1.4063rem;
+      background-color: #ffffff;
+    }
+    &__up-burgerline:nth-child(2) {
+      width: 0.9375rem;
+    }
+    &__up-btn {
+      border: 1px solid #d4d9dd;
+      border-radius: 0.3125rem;
+      padding: 0.625rem;
+      color: #343a3f;
+      svg {
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
+  }
+  .header__top .header__top-contacts .header__top-item:first-child {
+    display: none;
+  }
+  .header .header__top {
+    .header__menu-lang {
+      display: flex;
+    }
+    .header__top-daylist,
+    .header__top-links {
+      display: none;
+    }
+  }
+  .header__bottom {
+    display: none;
+  }
 }
